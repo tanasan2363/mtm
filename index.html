@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>サンプル</title>
+<style type="text/css">
+h1
+{
+color
+}
+ol.code-writer{ /* クラス名は任意（以下同）*/
+position:relative;
+margin-left: 0px;
+padding:30px 20px 10px 45px;
+border:none;
+background:#2F3437;
+}
+ol.code-writer:after{ /* 左上のラベル部分 */
+position: absolute;
+font-family: FontAwesome,'Quicksand','Avenir','Arial',sans-serif;/* f121はアイコンの番号 */
+position: absolute;
+top: 0px;
+left: 0px;
+padding: 5px 10px;
+background: #969998;
+line-height: 1;
+font-size: 0.9em;
+color: #fff;
+}
+ol.code-writer li{ /* 行番号とコードの間のライン */
+padding-left:15px;
+border-left:1.5px solid #000000;
+color: #fff;
+}
+</style>
+</head>
+<body>
+
+<h1>MTM</h1>
+
+<form name="MTE">
+  <label><input type="radio" name="base" id="base" value="light">ライト/light</label>
+  <label><input type="radio" name="base" id="base" value="dark">ダーク/dark</label>
+  <br>
+  <label><input type="text" id="name">テーマ名</label>
+  <br>
+  <label><input type="color" id="bg">背景色</label>
+  <br>
+  <label><input type="color" id="fg">文字色</label>
+  <br>
+  <label><input type="color" id="link">リンクの色</label>
+  <br>
+  <label><input type="color" id="navBg">UI:デフォルトの時の左のメニュー</label>
+  <br>
+  <label><input type="color" id="panel">TLなどの色が微妙に違うところの色</label>
+  <br>
+  <label><input type="color" id="accent">アクセントの色</label>
+  <br>
+  <label><input type="color" id="header">スマホモードの下の部分の色</label>
+  <br>
+  <label><input type="color" id="renote">リノートの色</label>
+  <br>
+  <label><input type="color" id="hashtag">ハッシュタグの色</label>
+  <br>
+  <label><input type="color" id="mention">メンションの色</label>
+  <br>
+  <label><input type="color" id="inputBorder">inputBorder</label>
+  <br>
+  <label><input type="text" id="author" placeholder="@minumarapid@misskey.io">ユーザー名</label>
+</form>
+<button id="btn">完了</button>
+
+<br>
+<br>
+<ol class="code-writer">
+<li><div id="t1"></div></li>
+<li><div id="t2"></div></li>
+<li><div id="t3"></div></li>
+<li><div id="t4"></div></li>
+<li><div id="t5"></div></li>
+<li><div id="t6"></div></li>
+<li><div id="t7"></div></li>
+<li><div id="t8"></div></li>
+<li><div id="t9"></div></li>
+<li><div id="t10"></div></li>
+<li><div id="t11"></div></li>
+<li><div id="t12"></div></li>
+<li><div id="t13"></div></li>
+<li><div id="t14"></div></li>
+<li><div id="t15"></div></li>
+<li><div id="t16"></div></li>
+<li><div id="t17"></div></li>
+<li><div id="t18"></div></li>
+</ol>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js">
+</script>
+<script>
+btn.addEventListener("click", () => {
+
+  let mte = document.forms.MTE;
+  let t1 = document.getElementById("t1");
+  let t2 = document.getElementById("t2");
+  let t3 = document.getElementById("t3");
+  let t4 = document.getElementById("t4");
+  let t5 = document.getElementById("t5");
+  let t6 = document.getElementById("t6");
+  let t7 = document.getElementById("t7");
+  let t8 = document.getElementById("t8");
+  let t9 = document.getElementById("t9");
+  let t10 = document.getElementById("t10");
+  let t11 = document.getElementById("t11");
+  let t12 = document.getElementById("t12");
+  let t13 = document.getElementById("t13");
+  let t14 = document.getElementById("t14");
+  let t15 = document.getElementById("t15");
+  let t16 = document.getElementById("t16");
+  let t17 = document.getElementById("t17");
+  let t18 = document.getElementById("t18");
+  t1.textContent = "{";
+  t2.textContent = " base: '" + mte.base.value + "',";
+  t3.textContent = " name: '" + mte.name.value + "',";
+  t4.textContent = " props: {";
+  t5.textContent = "  bg: '" + mte.bg.value + "',"
+  t6.textContent = "  fg: '" + mte.fg.value + "',"
+  t7.textContent = "  panel: '" + mte.panel.value + "',"
+  t8.textContent = "  accent: '" + mte.accent.value + "',"
+  t9.textContent = "  header: '" + mte.header.value + "',"
+  t10.textContent = "  renote: '" + mte.renote.value + "',"
+  t11.textContent = "  link: '" + mte.link.value + "',"
+  t12.textContent = "  navBg: '" + mte.navBg.value + "',"
+  t13.textContent = "  hashtag: '" + mte.hashtag.value + "',"
+  t14.textContent = "  mention: '" + mte.mention.value + "',"
+  t15.textContent = "  inputBorder: '" + mte.inputBorder.value + "',"
+  t16.textContent = " },"
+  t17.textContent = " author: '" + mte.author.value + "',"
+  t18.textContent = "}"
+  
+  scrollTo(0, 500);
+
+})
+</script>
+
+</body>
+</html>
