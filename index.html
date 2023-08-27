@@ -108,6 +108,8 @@ color: #fff;
 btn.addEventListener("click", () => {
 
   let mte = document.forms.MTE;
+  let a1 = Math.floor( Math.random() * 101 );
+  let a2 = Math.floor( Math.random() * 0.1 );
   let t1 = document.getElementById("t1");
   let t2 = document.getElementById("t2");
   let t3 = document.getElementById("t3");
@@ -145,7 +147,7 @@ btn.addEventListener("click", () => {
   t16.textContent = " },"
   t17.textContent = " author: '" + mte.author.value + "',"
   t18.textContent = "}"
-  t19.textContent = "	id: '" + Math.floor( Math.random() * 101 ); + Math.floor( Math.random() * 0.1 ); + "',"
+  t19.textContent = "	id: '" + a1 + a2 + "',"
   scrollTo(0, 500);
 
 })
