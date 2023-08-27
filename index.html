@@ -83,6 +83,7 @@ color: #fff;
 <br>
 <ol class="code-writer">
 <li><div id="t1"></div></li>
+<li><div id="t19"></div></li>
 <li><div id="t2"></div></li>
 <li><div id="t3"></div></li>
 <li><div id="t4"></div></li>
@@ -125,6 +126,7 @@ btn.addEventListener("click", () => {
   let t16 = document.getElementById("t16");
   let t17 = document.getElementById("t17");
   let t18 = document.getElementById("t18");
+  let t19 = document.getElementById("t18");
   t1.textContent = "{";
   t2.textContent = " base: '" + mte.base.value + "',";
   t3.textContent = " name: '" + mte.name.value + "',";
@@ -143,7 +145,7 @@ btn.addEventListener("click", () => {
   t16.textContent = " },"
   t17.textContent = " author: '" + mte.author.value + "',"
   t18.textContent = "}"
-  
+  t19.textContent = "	id: '" + var random = Math.floor( Math.random() * 101 ); + "',"
   scrollTo(0, 500);
 
 })
